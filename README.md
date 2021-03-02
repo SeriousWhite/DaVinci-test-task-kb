@@ -124,7 +124,7 @@ Pessimistic estimate time: 70h
 ```javascript
 {
     "id": "96465",
-    "developmentDividedByPoints": "0.2",
+    "productivity": "0.2",
 }
 ```
 
