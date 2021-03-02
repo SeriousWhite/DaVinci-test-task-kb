@@ -29,12 +29,14 @@ Pessimistic estimate time: 70h
 ```javascript
 [
   {
-    id: 1216,
-    sprintVelocity: 13,
+    id: "1236",
+    velocity: "10",
+    sprintName: "1. 0.15.0:fe0.22.0_be0.18.3",
   },
   {
-    id: 1226,
-    sprintVelocity: 9,
+    id: "1220",
+    velocity: "4",
+    sprintName: "0.9.0-fix: fe0.12.1_be0.5.17",
   },
 ];
 ```
@@ -43,8 +45,8 @@ Pessimistic estimate time: 70h
 
 ```javascript
 {
-    "id": 1216,
-    "sprintVelocity": 13
+    "id": "1216",
+    "velocity": "2",
 }
 ```
 
@@ -55,12 +57,20 @@ Pessimistic estimate time: 70h
 ```javascript
 [
   {
-    id: 98333,
-    leadTime: 1,
+    id: "98342",
+    sprintName: "1. 0.15.0:fe0.22.0_be0.18.3",
+    issueAssignedTo: "Andreyev Ilya",
+    leadTime: "3",
+    developmentLeadTime: "2",
+    testingLeadTime: "1",
   },
   {
-    id: 96473,
-    leadTime: 332,
+    id: "96463",
+    sprintName: "1. 0.15.2: fe0.22.8_be_0.18.11",
+    issueAssignedTo: "Admin QARedmine",
+    leadTime: "342",
+    developmentLeadTime: "3",
+    testingLeadTime: "339",
   },
 ];
 ```
@@ -69,60 +79,30 @@ Pessimistic estimate time: 70h
 
 ```javascript
 {
-    "id": 96473,
-    "leadTime": 332
+    "id": "96473",
+    "leadTime": "332",
 }
 ```
 
 3. Issue development lead time:
 
-- GET /api/statistic/developmentLeadTime/allIssues
-
-```javascript
-[
-  {
-    id: 98333,
-    developmentLeadTime: 1,
-  },
-  {
-    id: 96473,
-    developmentLeadTime: 11,
-  },
-];
-```
-
 - GET /api/statistic/developmentLeadTime/issue?id=id
 
 ```javascript
 {
-    "id": 96473,
-    "developmentLeadTime": 11
+    "id": "96473",
+    "developmentLeadTime": "11",
 }
 ```
 
 4. Issue testing lead time:
 
-- GET /api/statistic/testingLeadTime/allIssues
-
-```javascript
-[
-  {
-    id: 98333,
-    testingLeadTime: 0,
-  },
-  {
-    id: 96473,
-    testingLeadTime: 321,
-  },
-];
-```
-
 - GET /api/statistic/testingLeadTime/issue?id=id
 
 ```javascript
 {
-    "id": 96473,
-    "testingLeadTime": 321
+    "id": "96473",
+    "testingLeadTime": "321",
 }
 ```
 
@@ -132,19 +112,19 @@ Pessimistic estimate time: 70h
 
 ```javascript
 {
-    "id": 96465,
-    "stabilizationRatio": 2
+    "id": "96465",
+    "stabilizationRatio": "2",
 }
 ```
 
 6. Development hours/story points:
 
-- GET /api/statistic/developmentDividedByPoints/issue?id=id
+- GET /api/statistic/productivity/issue?id=id
 
 ```javascript
 {
-    "id": 96465,
-    "developmentDividedByPoints": 0.2
+    "id": "96465",
+    "developmentDividedByPoints": "0.2",
 }
 ```
 
@@ -157,18 +137,18 @@ Pessimistic estimate time: 70h
 ```javascript
 [
   {
-    id: 1212,
-    name: "0.7.0: fe0.11.1_be0.4.5",
-    createdOn: "2020-03-16T06:15:44Z",
-    projectName: "Micro Distributing E05G3",
-    status: "open",
-  },
-  {
-    id: 1216,
+    id: "1216",
     name: "0.9.0: fe0.12.1_be0.5.9",
     createdOn: "2020-03-26T09:12:19Z",
     projectName: "Micro Distributing E05G3",
-    status: "open",
+    status: "closed",
+  },
+  {
+    id: "1220",
+    name: "0.9.0-fix: fe0.12.1_be0.5.17",
+    createdOn: "2020-03-30T17:14:37Z",
+    projectName: "Micro Distributing E05G3",
+    status: "closed",
   },
 ];
 ```
@@ -180,28 +160,28 @@ Pessimistic estimate time: 70h
 ```javascript
 [
   {
-    id: 98341,
+    id: "98342",
     projectName: "Micro Distributing E05G3",
     trackerName: "[scrum] User Story",
     statusName: "Closed",
     priorityName: "Medium",
     authorName: "Andreyev Ilya",
-    targetVersionName: "0.9.0: fe0.12.1_be0.5.9",
-    subject: "Tesst task",
-    storyPoint: "11",
-    createdOn: "2021-02-18T17:37:14Z",
+    targetVersionName: "1. 0.15.0:fe0.22.0_be0.18.3",
+    subject: "Internal Communications",
+    storyPoint: "10",
+    createdOn: "2021-02-18T19:22:16Z",
   },
   {
-    id: 98337,
+    id: "96463",
     projectName: "Micro Distributing E05G3",
     trackerName: "[scrum] User Story",
     statusName: "Closed",
     priorityName: "Medium",
-    authorName: "Andreyev Ilya",
-    targetVersionName: "1. 0.11.0:fe0.18.3_be0.9.1",
-    subject: "styled-components",
-    storyPoint: "9",
-    createdOn: "2021-02-17T22:08:00Z",
+    authorName: "Admin QARedmine",
+    targetVersionName: "1. 0.15.2: fe0.22.8_be_0.18.11",
+    subject: "My Profile",
+    storyPoint: "6",
+    createdOn: "2020-03-06T15:03:39Z",
   },
 ];
 ```
